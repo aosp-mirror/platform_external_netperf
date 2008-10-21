@@ -1,348 +1,351 @@
+/* config.h.  Generated from config.h.in by configure.  */
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Define to one to enable dirty buffer support. May affect results. */
-#undef DIRTY
+/* #undef DIRTY */
+
+#undef AF_INET6
 
 /* Define to 1 if you have the `alarm' function. */
-#undef HAVE_ALARM
+#define HAVE_ALARM 1
 
 /* Define to 1 if you have the <arpa/inet.h> header file. */
-#undef HAVE_ARPA_INET_H
+#define HAVE_ARPA_INET_H 1
 
 /* Define to 1 if you have the `bindprocessor' function. */
-#undef HAVE_BINDPROCESSOR
+/* #undef HAVE_BINDPROCESSOR */
 
 /* Define to 1 if you have the `bind_to_cpu_id' function. */
-#undef HAVE_BIND_TO_CPU_ID
+/* #undef HAVE_BIND_TO_CPU_ID */
 
 /* Define to 1 if you have the `bzero' function. */
-#undef HAVE_BZERO
+#define HAVE_BZERO 1
 
 /* Define to 1 if you have the <endian.h> header file. */
-#undef HAVE_ENDIAN_H
+/* #define HAVE_ENDIAN_H 1 */
 
 /* Define to 1 if you have the <errno.h> header file. */
-#undef HAVE_ERRNO_H
+#define HAVE_ERRNO_H 1
 
 /* Define to 1 if you have the <fcntl.h> header file. */
-#undef HAVE_FCNTL_H
+#define HAVE_FCNTL_H 1
 
 /* Define to 1 if you have the `fork' function. */
-#undef HAVE_FORK
+#define HAVE_FORK 1
 
 /* Define to 1 if you have the `getaddrinfo' function. */
-#undef HAVE_GETADDRINFO
+#define HAVE_GETADDRINFO 1
 
 /* Define to 1 if you have the `gethostbyname' function. */
-#undef HAVE_GETHOSTBYNAME
+#define HAVE_GETHOSTBYNAME 1
 
 /* Define to 1 if you have the `gethrtime' function. */
-#undef HAVE_GETHRTIME
+/* #undef HAVE_GETHRTIME */
 
 /* Define to 1 if you have the `getnameinfo' function. */
-#undef HAVE_GETNAMEINFO
+#define HAVE_GETNAMEINFO 1
 
 /* Define to 1 if you have the `getpagesize' function. */
-#undef HAVE_GETPAGESIZE
+#define HAVE_GETPAGESIZE 1
 
 /* Define to 1 if you have the `gettimeofday' function. */
-#undef HAVE_GETTIMEOFDAY
+#define HAVE_GETTIMEOFDAY 1
 
 /* Define to one to include ICSC-EXS tests. */
-#undef HAVE_ICSC_EXS
+/* #undef HAVE_ICSC_EXS */
 
 /* Define to 1 if you have the `inet_ntoa' function. */
-#undef HAVE_INET_NTOA
+#define HAVE_INET_NTOA 1
 
 /* Define to 1 if you have the `inet_ntop' function. */
-#undef HAVE_INET_NTOP
+#define HAVE_INET_NTOP 1
 
 /* Define to 1 if you have the <inttypes.h> header file. */
-#undef HAVE_INTTYPES_H
+#define HAVE_INTTYPES_H 1
 
 /* Define to 1 if you have the `exs' library (-lexs). */
-#undef HAVE_LIBEXS
+/* #undef HAVE_LIBEXS */
 
 /* Define to 1 if you have the `kstat' library (-lkstat). */
-#undef HAVE_LIBKSTAT
+/* #undef HAVE_LIBKSTAT */
 
 /* Define to 1 if you have the `m' library (-lm). */
-#undef HAVE_LIBM
+#define HAVE_LIBM 1
 
 /* Define to 1 if you have the `mach' library (-lmach). */
-#undef HAVE_LIBMACH
+/* #undef HAVE_LIBMACH */
 
 /* Define to 1 if you have the `nsl' library (-lnsl). */
-#undef HAVE_LIBNSL
+/* #undef HAVE_LIBNSL */
 
 /* Define to 1 if you have the `perfstat' library (-lperfstat). */
-#undef HAVE_LIBPERFSTAT
+/* #undef HAVE_LIBPERFSTAT */
 
 /* Define to 1 if you have the `sctp' library (-lsctp). */
-#undef HAVE_LIBSCTP
+/* #undef HAVE_LIBSCTP */
 
 /* Define to 1 if you have the `sdp' library (-lsdp). */
-#undef HAVE_LIBSDP
+/* #undef HAVE_LIBSDP */
 
 /* Define to 1 if you have the `sendfile' library (-lsendfile). */
-#undef HAVE_LIBSENDFILE
+/* #undef HAVE_LIBSENDFILE */
 
 /* Define to 1 if you have the `socket' library (-lsocket). */
-#undef HAVE_LIBSOCKET
+/* #undef HAVE_LIBSOCKET */
 
 /* Define to 1 if you have the <limits.h> header file. */
-#undef HAVE_LIMITS_H
+#define HAVE_LIMITS_H 1
 
 /* Define to 1 if you have the <malloc.h> header file. */
-#undef HAVE_MALLOC_H
+/* #define HAVE_MALLOC_H 1 */
 
 /* Define to 1 if you have the `memcpy' function. */
-#undef HAVE_MEMCPY
+#define HAVE_MEMCPY 1
 
 /* Define to 1 if you have the <memory.h> header file. */
-#undef HAVE_MEMORY_H
+#define HAVE_MEMORY_H 1
 
 /* Define to 1 if you have the `memset' function. */
-#undef HAVE_MEMSET
+#define HAVE_MEMSET 1
 
 /* Define to 1 if you have a working `mmap' system call. */
-#undef HAVE_MMAP
+#define HAVE_MMAP 1
 
 /* Define to 1 if you have the `mpctl' function. */
-#undef HAVE_MPCTL
+/* #undef HAVE_MPCTL */
 
 /* Define to 1 if you have the `munmap' function. */
-#undef HAVE_MUNMAP
+#define HAVE_MUNMAP 1
 
 /* Define to 1 if you have the <netdb.h> header file. */
-#undef HAVE_NETDB_H
+#define HAVE_NETDB_H 1
 
 /* Define to 1 if you have the <netinet/in.h> header file. */
-#undef HAVE_NETINET_IN_H
+#define HAVE_NETINET_IN_H 1
 
 /* Define to 1 if you have the <netinet/sctp.h> header file. */
-#undef HAVE_NETINET_SCTP_H
+/* #undef HAVE_NETINET_SCTP_H */
 
 /* Define to 1 if you have the `processor_bind' function. */
-#undef HAVE_PROCESSOR_BIND
+/* #undef HAVE_PROCESSOR_BIND */
 
 /* Define to 1 if you have the `sched_setaffinity' function. */
-#undef HAVE_SCHED_SETAFFINITY
+/* #define HAVE_SCHED_SETAFFINITY 1 */
 
 /* Define to 1 if `struct sctp_event_subscribe' has a
    `sctp_adaptation_layer_event' member */
-#undef HAVE_SCTP_ADAPTATION_LAYER_EVENT
+/* #undef HAVE_SCTP_ADAPTATION_LAYER_EVENT */
 
 /* Define to 1 if you have the `select' function. */
-#undef HAVE_SELECT
+#define HAVE_SELECT 1
 
 /* Define to 1 if you have the `sendfile' function. */
-#undef HAVE_SENDFILE
+/* #undef HAVE_SENDFILE */ 
 
 /* Define to 1 if you have the <signal.h> header file. */
-#undef HAVE_SIGNAL_H
+#define HAVE_SIGNAL_H 1
 
 /* Define to 1 if you have the `socket' function. */
-#undef HAVE_SOCKET
+#define HAVE_SOCKET 1
 
 /* Define to 1 if you have the `sqrt' function. */
-#undef HAVE_SQRT
+#define HAVE_SQRT 1
 
 /* Define to 1 if stdbool.h conforms to C99. */
-#undef HAVE_STDBOOL_H
+#define HAVE_STDBOOL_H 1
 
 /* Define to 1 if you have the <stdint.h> header file. */
-#undef HAVE_STDINT_H
+#define HAVE_STDINT_H 1
 
 /* Define to 1 if you have the <stdlib.h> header file. */
-#undef HAVE_STDLIB_H
+#define HAVE_STDLIB_H 1
 
 /* Define to 1 if you have the `strcasecmp' function. */
-#undef HAVE_STRCASECMP
+#define HAVE_STRCASECMP 1
 
 /* Define to 1 if you have the `strchr' function. */
-#undef HAVE_STRCHR
+#define HAVE_STRCHR 1
 
 /* Define to 1 if you have the <strings.h> header file. */
-#undef HAVE_STRINGS_H
+#define HAVE_STRINGS_H 1
 
 /* Define to 1 if you have the <string.h> header file. */
-#undef HAVE_STRING_H
+#define HAVE_STRING_H 1
 
 /* Define to 1 if you have the `strstr' function. */
-#undef HAVE_STRSTR
+#define HAVE_STRSTR 1
 
 /* Define to 1 if you have the `strtoul' function. */
-#undef HAVE_STRTOUL
+#define HAVE_STRTOUL 1
 
 /* Define to 1 if <netinet/in.h> defines `struct sockaddr_storage' */
-#undef HAVE_STRUCT_SOCKADDR_STORAGE
+#define HAVE_STRUCT_SOCKADDR_STORAGE 1
 
 /* Define to 1 if you have the <sys/ioctl.h> header file. */
-#undef HAVE_SYS_IOCTL_H
+#define HAVE_SYS_IOCTL_H 1
 
 /* Define to 1 if you have the <sys/mman.h> header file. */
-#undef HAVE_SYS_MMAN_H
+#define HAVE_SYS_MMAN_H 1
 
 /* Define to 1 if you have the <sys/param.h> header file. */
-#undef HAVE_SYS_PARAM_H
+#define HAVE_SYS_PARAM_H 1
 
 /* Define to 1 if you have the <sys/select.h> header file. */
-#undef HAVE_SYS_SELECT_H
+#define HAVE_SYS_SELECT_H 1
 
 /* Define to 1 if you have the <sys/socket.h> header file. */
-#undef HAVE_SYS_SOCKET_H
+#define HAVE_SYS_SOCKET_H 1
 
 /* Define to 1 if you have the <sys/stat.h> header file. */
-#undef HAVE_SYS_STAT_H
+#define HAVE_SYS_STAT_H 1
 
 /* Define to 1 if you have the <sys/time.h> header file. */
-#undef HAVE_SYS_TIME_H
+#define HAVE_SYS_TIME_H 1
 
 /* Define to 1 if you have the <sys/types.h> header file. */
-#undef HAVE_SYS_TYPES_H
+#define HAVE_SYS_TYPES_H 1
 
 /* Define to 1 if you have <sys/wait.h> that is POSIX.1 compatible. */
-#undef HAVE_SYS_WAIT_H
+#define HAVE_SYS_WAIT_H 1
 
 /* Define to 1 if you have the `uname' function. */
-#undef HAVE_UNAME
+#define HAVE_UNAME 1
 
 /* Define to 1 if you have the <unistd.h> header file. */
-#undef HAVE_UNISTD_H
+#define HAVE_UNISTD_H 1
 
 /* Define to 1 if you have the `vfork' function. */
-#undef HAVE_VFORK
+#define HAVE_VFORK 1
 
 /* Define to 1 if you have the <vfork.h> header file. */
-#undef HAVE_VFORK_H
+/* #undef HAVE_VFORK_H */
 
 /* Define to 1 if `fork' works. */
-#undef HAVE_WORKING_FORK
+#define HAVE_WORKING_FORK 1
 
 /* Define to 1 if `vfork' works. */
-#undef HAVE_WORKING_VFORK
+#define HAVE_WORKING_VFORK 1
 
 /* Define to 1 if the system has the type `_Bool'. */
-#undef HAVE__BOOL
+#define HAVE__BOOL 1
 
 /* Define to 1 if `h_errno' is declared by <netdb.h> */
-#undef H_ERRNO_DECLARED
+#define H_ERRNO_DECLARED 1
 
 /* Name of package */
-#undef PACKAGE
+#define PACKAGE "netperf"
 
 /* Define to the address where bug reports for this package should be sent. */
-#undef PACKAGE_BUGREPORT
+#define PACKAGE_BUGREPORT ""
 
 /* Define to the full name of this package. */
-#undef PACKAGE_NAME
+#define PACKAGE_NAME "netperf"
 
 /* Define to the full name and version of this package. */
-#undef PACKAGE_STRING
+#define PACKAGE_STRING "netperf 2.4.4"
 
 /* Define to the one symbol short name of this package. */
-#undef PACKAGE_TARNAME
+#define PACKAGE_TARNAME "netperf"
 
 /* Define to the version of this package. */
-#undef PACKAGE_VERSION
+#define PACKAGE_VERSION "2.4.4"
 
 /* Define as the return type of signal handlers (`int' or `void'). */
-#undef RETSIGTYPE
+#define RETSIGTYPE void
 
 /* Define to the type of arg 1 for `select'. */
-#undef SELECT_TYPE_ARG1
+#define SELECT_TYPE_ARG1 int
 
 /* Define to the type of args 2, 3 and 4 for `select'. */
-#undef SELECT_TYPE_ARG234
+#define SELECT_TYPE_ARG234 (fd_set *)
 
 /* Define to the type of arg 5 for `select'. */
-#undef SELECT_TYPE_ARG5
+#define SELECT_TYPE_ARG5 (struct timeval *)
 
 /* Define to 1 if the `setpgrp' function takes no argument. */
-#undef SETPGRP_VOID
+#define SETPGRP_VOID 1
 
 /* Define to 1 if you have the ANSI C header files. */
-#undef STDC_HEADERS
+#define STDC_HEADERS 1
 
 /* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
-#undef TIME_WITH_SYS_TIME
+#define TIME_WITH_SYS_TIME 1
 
 /* Use Solaris's kstat interface to measure CPU util. */
-#undef USE_KSTAT
+/* #undef USE_KSTAT */
 
 /* Use looper/soaker processes to measure CPU util. */
-#undef USE_LOOPER
+/* #undef USE_LOOPER */
 
 /* Use MacOS X's host_info interface to measure CPU util. */
-#undef USE_OSX
+/* #undef USE_OSX */
 
 /* Use AIX's perfstat interface to measure CPU util. */
-#undef USE_PERFSTAT
+/* #undef USE_PERFSTAT */
 
 /* Use Linux's procstat interface to measure CPU util. */
-#undef USE_PROC_STAT
+#define USE_PROC_STAT 1
 
 /* Use HP-UX's pstat interface to measure CPU util. */
-#undef USE_PSTAT
+/* #undef USE_PSTAT */
 
 /* Use FreeBSD's sysctl interface to measure CPU util. */
-#undef USE_SYSCTL
+/* #undef USE_SYSCTL */
 
 /* Version number of package */
-#undef VERSION
+#define VERSION "2.4.4"
 
 /* Define to one to enable demo support. May affect results. */
-#undef WANT_DEMO
+/* #undef WANT_DEMO */
 
 /* Define to one to include DLPI tests. */
-#undef WANT_DLPI
+/* #undef WANT_DLPI */
 
 /* Define to one to enable initial _RR burst support. May affect results. */
-#undef WANT_FIRST_BURST
+/* #undef WANT_FIRST_BURST */
 
 /* Define to one to enable histogram support. May affect results. */
-#undef WANT_HISTOGRAM
+/* #undef WANT_HISTOGRAM */
 
 /* Define to one to enable paced operation support. May affect results. */
-#undef WANT_INTERVALS
+/* #undef WANT_INTERVALS */
 
 /* Define to one to include SCTP tests. */
-#undef WANT_SCTP
+/* #define WANT_SCTP 1 */
 
 /* Define to one to include SDP tests. */
-#undef WANT_SDP
+/* #undef WANT_SDP */
 
 /* Define to one to spin waiting on paced operation. WILL AFFEFCT CPU
    UTILIZATION */
-#undef WANT_SPIN
+/* #undef WANT_SPIN */
 
 /* Define to one to include Unix Domain socket tests. */
-#undef WANT_UNIX
+/* #undef WANT_UNIX */
 
 /* Define to one to include XTI tests. */
-#undef WANT_XTI
+/* #undef WANT_XTI */
 
 /* Number of bits in a file offset, on hosts where this is settable. */
-#undef _FILE_OFFSET_BITS
+/* #undef _FILE_OFFSET_BITS */
 
 /* Define for large files, on AIX-style hosts. */
-#undef _LARGE_FILES
+/* #undef _LARGE_FILES */
 
 /* Define to empty if `const' does not conform to ANSI C. */
-#undef const
+/* #undef const */
 
 /* type to use in place of socklen_t if not defined */
-#undef netperf_socklen_t
+#define netperf_socklen_t size_t
 
 /* Define to `long int' if <sys/types.h> does not define. */
-#undef off_t
+/* #undef off_t */
 
 /* Define to `int' if <sys/types.h> does not define. */
-#undef pid_t
+/* #undef pid_t */
 
 /* Define to `unsigned int' if <sys/types.h> does not define. */
-#undef size_t
+/* #undef size_t */
 
 /* Define as `fork' if `vfork' does not work. */
-#undef vfork
+/* #undef vfork */
