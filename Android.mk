@@ -14,7 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-L_DEFS := -DHAVE_CONFIG_H -UAF_INET6
+L_DEFS := -DHAVE_CONFIG_H
 L_CFLAGS := $(L_DEFS)
 L_USE_CPU_SOURCE := netcpu_none.c
 

@@ -4,8 +4,6 @@
 /* Define to one to enable dirty buffer support. May affect results. */
 /* #undef DIRTY */
 
-#undef AF_INET6
-
 /* Define to 1 if you have the `alarm' function. */
 #define HAVE_ALARM 1
 
