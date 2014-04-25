@@ -1253,7 +1253,7 @@ allocate_buffer_ring(int width, int buffer_size, int alignment, int offset)
     /* get the ring element */
     temp_link = (struct ring_elt *)malloc(sizeof(struct ring_elt));
     if (temp_link == NULL) {
-      printf("malloc(%u) failed!\n", sizeof(struct ring_elt));
+      printf("malloc(%zu) failed!\n", sizeof(struct ring_elt));
       exit(1);
     }
     /* remember the first one so we can close the ring at the end */
@@ -1676,10 +1676,10 @@ alloc_sendfile_buf_ring(int width,
 void
 dump_request()
 {
-int counter = 0;
+size_t counter = 0;
 fprintf(where,"request contents:\n");
 for (counter = 0; counter < ((sizeof(netperf_request)/4)-3); counter += 4) {
-  fprintf(where,"%d:\t%8x %8x %8x %8x \t|%4.4s| |%4.4s| |%4.4s| |%4.4s|\n",
+  fprintf(where,"%zu:\t%8x %8x %8x %8x \t|%4.4s| |%4.4s| |%4.4s| |%4.4s|\n",
           counter,
           request_array[counter],
           request_array[counter+1],
@@ -1707,11 +1707,11 @@ fflush(where);
 void
 dump_response()
 {
-int counter = 0;
+size_t counter = 0;
 
 fprintf(where,"response contents\n");
 for (counter = 0; counter < ((sizeof(netperf_response)/4)-3); counter += 4) {
-  fprintf(where,"%d:\t%8x %8x %8x %8x \t>%4.4s< >%4.4s< >%4.4s< >%4.4s<\n",
+  fprintf(where,"%zu:\t%8x %8x %8x %8x \t>%4.4s< >%4.4s< >%4.4s< >%4.4s<\n",
           counter,
           response_array[counter],
           response_array[counter+1],
@@ -2113,7 +2113,7 @@ set_nonblock (SOCKET sock)
 void
 send_request()
 {
-  int   counter=0;
+  size_t counter=0;
   
   /* display the contents of the request if the debug level is high */
   /* enough. otherwise, just send the darned thing ;-) */
@@ -2144,7 +2144,7 @@ send_request()
     dump_request();
 
     fprintf(where,
-            "\nsend_request: about to send %u bytes from %p\n",
+            "\nsend_request: about to send %zu bytes from %p\n",
             sizeof(netperf_request),
             &netperf_request);
     fflush(where);
@@ -2175,7 +2175,7 @@ send_request()
 void
 send_response()
 {
-  int   counter=0;
+  size_t counter=0;
   int	bytes_sent;
 
   /* display the contents of the request if the debug level is high */
@@ -2183,7 +2183,7 @@ send_response()
 
   if (debug > 1) {
     fprintf(where,
-            "send_response: contents of %u ints before htonl\n",
+            "send_response: contents of %zu ints before htonl\n",
             sizeof(netperf_response)/4);
     dump_response();
   }
@@ -2203,7 +2203,7 @@ send_response()
             "send_response: contents after htonl\n");
     dump_response();
     fprintf(where,
-            "about to send %u bytes from %p\n",
+            "about to send %zu bytes from %p\n",
             sizeof(netperf_response),
             &netperf_response);
     fflush(where);
@@ -2241,7 +2241,7 @@ int     tot_bytes_recvd,
         bytes_left;
 char    *buf = (char *)&netperf_request;
 int     buflen = sizeof(netperf_request);
-int     counter;
+size_t  counter;
 
 tot_bytes_recvd = 0;    
  bytes_recvd = 0;     /* nt_lint; bytes_recvd uninitialized if buflen == 0 */
@@ -2352,7 +2352,7 @@ int     tot_bytes_recvd,
         bytes_left;
 char    *buf = (char *)&netperf_response;
 int     buflen = sizeof(netperf_response);
-int     counter;
+size_t  counter;
 
  /* stuff for select, use fd_set for better compliance */
 fd_set  readfds;
@@ -2392,7 +2392,7 @@ if ((counter = select(FD_SETSIZE,
                       0,
                       &timeout)) != 1) {
   fprintf(where,
-          "netperf: receive_response: no response received. errno %d counter %d\n",
+          "netperf: receive_response: no response received. errno %d counter %zu\n",
           errno,
           counter);
   exit(1);

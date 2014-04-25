@@ -473,7 +473,7 @@ scan_cmd_line(int argc, char *argv[])
   
   program = (char *)malloc(strlen(argv[0]) + 1);
   if (program == NULL) {
-    printf("malloc(%d) failed!\n", strlen(argv[0]) + 1);
+    printf("malloc(%zu) failed!\n", strlen(argv[0]) + 1);
     exit(1);
   }
   strcpy(program, argv[0]);
