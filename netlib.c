@@ -1253,7 +1253,7 @@ allocate_buffer_ring(int width, int buffer_size, int alignment, int offset)
     /* get the ring element */
     temp_link = (struct ring_elt *)malloc(sizeof(struct ring_elt));
     if (temp_link == NULL) {
-      printf("malloc(%u) failed!\n", sizeof(struct ring_elt));
+      printf("malloc(%u) failed!\n", (unsigned)sizeof(struct ring_elt));
       exit(1);
     }
     /* remember the first one so we can close the ring at the end */
@@ -1676,7 +1676,7 @@ alloc_sendfile_buf_ring(int width,
 void
 dump_request()
 {
-int counter = 0;
+unsigned counter = 0;
 fprintf(where,"request contents:\n");
 for (counter = 0; counter < ((sizeof(netperf_request)/4)-3); counter += 4) {
   fprintf(where,"%d:\t%8x %8x %8x %8x \t|%4.4s| |%4.4s| |%4.4s| |%4.4s|\n",
@@ -1707,7 +1707,7 @@ fflush(where);
 void
 dump_response()
 {
-int counter = 0;
+unsigned counter = 0;
 
 fprintf(where,"response contents\n");
 for (counter = 0; counter < ((sizeof(netperf_response)/4)-3); counter += 4) {
@@ -2113,7 +2113,7 @@ set_nonblock (SOCKET sock)
 void
 send_request()
 {
-  int   counter=0;
+  unsigned counter=0;
   
   /* display the contents of the request if the debug level is high */
   /* enough. otherwise, just send the darned thing ;-) */
@@ -2145,7 +2145,7 @@ send_request()
 
     fprintf(where,
             "\nsend_request: about to send %u bytes from %p\n",
-            sizeof(netperf_request),
+            (unsigned)sizeof(netperf_request),
             &netperf_request);
     fflush(where);
   }
@@ -2175,7 +2175,7 @@ send_request()
 void
 send_response()
 {
-  int   counter=0;
+  unsigned counter=0;
   int	bytes_sent;
 
   /* display the contents of the request if the debug level is high */
@@ -2184,7 +2184,7 @@ send_response()
   if (debug > 1) {
     fprintf(where,
             "send_response: contents of %u ints before htonl\n",
-            sizeof(netperf_response)/4);
+            (unsigned)sizeof(netperf_response)/4);
     dump_response();
   }
 
@@ -2204,7 +2204,7 @@ send_response()
     dump_response();
     fprintf(where,
             "about to send %u bytes from %p\n",
-            sizeof(netperf_response),
+            (unsigned)sizeof(netperf_response),
             &netperf_response);
     fflush(where);
   }
@@ -2241,7 +2241,7 @@ int     tot_bytes_recvd,
         bytes_left;
 char    *buf = (char *)&netperf_request;
 int     buflen = sizeof(netperf_request);
-int     counter;
+unsigned counter;
 
 tot_bytes_recvd = 0;    
  bytes_recvd = 0;     /* nt_lint; bytes_recvd uninitialized if buflen == 0 */
@@ -2352,7 +2352,7 @@ int     tot_bytes_recvd,
         bytes_left;
 char    *buf = (char *)&netperf_response;
 int     buflen = sizeof(netperf_response);
-int     counter;
+unsigned counter;
 
  /* stuff for select, use fd_set for better compliance */
 fd_set  readfds;
