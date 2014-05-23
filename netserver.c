@@ -813,7 +813,7 @@ main(int argc, char *argv[])
 	/* Save away the program name */
 	program = (char *)malloc(strlen(argv[0]) + 1);
 	if (program == NULL) {
-		printf("malloc(%d) failed!\n", strlen(argv[0]) + 1);
+		printf("malloc(%zu) failed!\n", strlen(argv[0]) + 1);
 		return 1 ;
 	}
 	strcpy(program, argv[0]);
