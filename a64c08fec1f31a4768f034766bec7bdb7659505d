@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f6195673_b9b75712",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2015-10-30T04:57:57Z",
+      "side": 1,
+      "message": "i\u0027ve mailed the author with patches to remove the need for these. i\u0027ve also mentioned that we\u0027d like to not have the unnecessary \u003csys/ipc.h\u003e includes.",
+      "revId": "a64c08fec1f31a4768f034766bec7bdb7659505d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
