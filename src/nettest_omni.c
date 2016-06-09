@@ -1394,7 +1394,7 @@ dump_netperf_output_source(FILE *where)
   fflush(where);
 }
 
-#define MY_MAX(a,b) ((a > b) ? a : b)
+#define MY_MAX(a,b) (((a) > (b)) ? (a) : (b))
 
 #define NETPERF_LINE_MAX(x) \
     MY_MAX(MY_MAX(MY_MAX(strlen(netperf_output_source[x].line[0]),\
@@ -1403,10 +1403,10 @@ dump_netperf_output_source(FILE *where)
 	   strlen(netperf_output_source[x].line[3]))
 
 #define NETPERF_LINE_TOT(x) \
-    strlen(netperf_output_source[x].line[0]) +\
+    (strlen(netperf_output_source[x].line[0]) +\
     strlen(netperf_output_source[x].line[1]) +\
     strlen(netperf_output_source[x].line[2]) +\
-    strlen(netperf_output_source[x].line[3]) + 4
+    strlen(netperf_output_source[x].line[3]) + 4)
 
 enum netperf_output_name
 match_string_to_output_mnenomic(char *candidate) {

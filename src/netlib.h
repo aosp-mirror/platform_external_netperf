@@ -26,7 +26,7 @@
 #define         MAXMESSAGESIZE  65536
 #define         MAXALIGNMENT    16384
 #define         MAXOFFSET        4096
-#define         DATABUFFERLEN   MAXMESSAGESIZE+MAXALIGNMENT+MAXOFFSET
+#define         DATABUFFERLEN   (MAXMESSAGESIZE+MAXALIGNMENT+MAXOFFSET)
 
 #define         DEBUG_ON                1
 #define         DEBUG_OFF               2
@@ -255,15 +255,15 @@ enum netperf_output_modes {
 /* some defines for security types, perhaps these would be better
    elsewhere but for now here they are */
 
-#define NSEC_UNKNOWN  -1
+#define NSEC_UNKNOWN  (-1)
 #define NSEC_DISABLED 0
 #define NSEC_PERMISSIVE  1
 #define NSEC_ENFORCING 2
 
-#define NSEC_TYPE_UNKNOWN -1
+#define NSEC_TYPE_UNKNOWN (-1)
 #define NSEC_TYPE_SELINUX 1
 
-#define NETFW_UNKNOWN -1
+#define NETFW_UNKNOWN (-1)
 #define NETFW_IPTABLES 1
 
  /* some of the fields in these structures are going to be doubles and */
@@ -388,8 +388,8 @@ extern void PrintWin32Error(FILE *stream, LPSTR text);
 /* Really shouldn't use manifest constants! */
 /*+*+SAF There are other examples of "== -1" and "<0" that probably */
 /*+*+SAF should be cleaned up as well. */
-#define INVALID_SOCKET -1
-#define SOCKET_ERROR -1
+#define INVALID_SOCKET (-1)
+#define SOCKET_ERROR (-1)
 
 #define SOCKET int
 #define Set_errno(num) errno = (num)
@@ -707,9 +707,9 @@ extern HANDLE WinTimer;
 #endif
 
 #define ALIGN_BUFFER(BufPtr, Align, Offset) \
-  (char *)(( (ULONG_PTR)(BufPtr) + \
+  ((char *)(( (ULONG_PTR)(BufPtr) + \
 			(ULONG_PTR) (Align) -1) & \
-			~((ULONG_PTR) (Align) - 1)) + (ULONG_PTR)(Offset)
+			~((ULONG_PTR) (Align) - 1)) + (ULONG_PTR)(Offset))
 
  /* if your system has bcopy and bzero, include it here, otherwise, we */
  /* will try to use memcpy aand memset. fix from Bruce Barnett @ GE. */
@@ -734,7 +734,7 @@ extern HANDLE WinTimer;
 #endif /* HAVE_BZERO */
 
 #ifndef HAVE_MIN
-#define min(a,b) ((a < b) ? a : b)
+#define min(a,b) (((a) < (b)) ? (a) : (b))
 #endif /* HAVE_MIN */
 
 #ifdef USE_PERFSTAT

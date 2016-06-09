@@ -2329,8 +2329,8 @@ bind_to_specific_processor(int processor_affinity, int use_cpu_map)
   typedef cpu_set_t netperf_cpu_set_t;
 #else
 #define NETPERF_CPU_SETSIZE sizeof(unsigned long)
-#define NETPERF_CPU_SET(cpu, cpusetp) *cpusetp = 1 << cpu
-#define NETPERF_CPU_ZERO(cpusetp) *cpusetp = (unsigned long)0
+#define NETPERF_CPU_SET(cpu, cpusetp) *(cpusetp) = 1 << cpu
+#define NETPERF_CPU_ZERO(cpusetp) *(cpusetp) = (unsigned long)0
   typedef unsigned long netperf_cpu_set_t;
 #endif
 

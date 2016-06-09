@@ -23,7 +23,7 @@
    platform to platform, which means we need to define our own values
    to pass between netperf and netserver so they can be translated to
    the local versions.  NST == Netperf Socket Type raj 2008-01-14 */
-#define NST_UNKN     -1
+#define NST_UNKN     (-1)
 #define NST_STREAM    1
 #define NST_DGRAM     2
 #define NST_DCCP      3

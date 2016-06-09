@@ -32,14 +32,14 @@
 #define NETPERF_XMIT 0x2
 #define NETPERF_RECV 0x4
 
-#define NETPERF_IS_RR(x) (((x & NETPERF_XMIT) && (x & NETPERF_RECV)) || \
-			  (!((x & NETPERF_XMIT) || (x & NETPERF_RECV))))
+#define NETPERF_IS_RR(x) ((((x) & NETPERF_XMIT) && ((x) & NETPERF_RECV)) || \
+			  (!(((x) & NETPERF_XMIT) || ((x) & NETPERF_RECV))))
 
-#define NETPERF_RECV_ONLY(x) ((x & NETPERF_RECV) && !(x & NETPERF_XMIT))
+#define NETPERF_RECV_ONLY(x) (((x) & NETPERF_RECV) && !((x) & NETPERF_XMIT))
 
-#define NETPERF_XMIT_ONLY(x) ((x & NETPERF_XMIT) && !(x & NETPERF_RECV))
+#define NETPERF_XMIT_ONLY(x) (((x) & NETPERF_XMIT) && !((x) & NETPERF_RECV))
 
-#define NETPERF_CC(x) (!(x & NETPERF_XMIT) && !(x & NETPERF_RECV))
+#define NETPERF_CC(x) (!((x) & NETPERF_XMIT) && !((x) & NETPERF_RECV))
 
 
 /* misc defines for the hell of it					*/

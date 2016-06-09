@@ -65,7 +65,7 @@ static cpu_states_t  lib_end_count[MAXCPUS];
 /* The max. length of one line of /proc/stat cpu output */
 #define CPU_LINE_LENGTH (int)((CPU_STATES * sizeof (long) / 3 + 1) * 4 + 8)
 #define PROC_STAT_FILE_NAME "/proc/stat"
-#define N_CPU_LINES(nr) (nr == 1 ? 1 : 1 + nr)
+#define N_CPU_LINES(nr) ((nr) == 1 ? 1 : 1 + (nr))
 
 static int proc_stat_fd = -1;
 static char *proc_stat_buf = NULL;
