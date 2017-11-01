@@ -19,8 +19,15 @@ netperf_CFLAGS := \
   -DHAVE_CONFIG_H \
   -include unistd.h \
   -include sys/sendfile.h \
+  -Wall -Werror \
+  -Wno-incompatible-pointer-types \
+  -Wno-pointer-sign \
+  -Wno-sometimes-uninitialized \
   -Wno-sign-compare \
+  -Wno-uninitialized \
+  -Wno-unused-function \
   -Wno-unused-parameter \
+  -Wno-unused-variable \
 
 netperf_SRC_FILES := \
   src/dscp.c \
